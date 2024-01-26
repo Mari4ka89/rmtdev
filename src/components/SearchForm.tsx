@@ -1,8 +1,12 @@
-import { useState } from "react";
+type SearchForm = {
+  searchText: string;
+  setSearchText: (searchText: string) => void;
+};
 
-export default function SearchForm() {
-  const [searchText, setSearchText] = useState("");
-
+export default function SearchForm({
+  searchText,
+  setSearchText,
+}: SearchFormProps) {
   return (
     <form
       onSubmit={(e) => {
